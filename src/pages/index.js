@@ -1,0 +1,1 @@
+export {Page_home} from "./Page_home"
