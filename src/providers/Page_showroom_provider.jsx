@@ -49,7 +49,7 @@ export const Page_showroom_provider = ({children}) => {
             "/images/page_youngs/img-3.jpg",
             "/images/page_youngs/img-4.jpg",
         ],
-        title: "Women",
+        title: "Youngs",
         paragraph: "Clothing is a form of expression and, for many young people, a way to showcase their personality. Whether it's something simple and casual or more elegant, clothing can be a way to present oneself to the world as they are, without the need to compare or compete with others. At the end of the day, the most important thing is to feel good in one's own skin and enjoy the fun and creativity that fashion can offer.",
         products: {
             shirts: databaseProducts.youngs.shirts,

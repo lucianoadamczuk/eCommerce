@@ -8,9 +8,9 @@ import { Interface_centered } from "../interfaces"
 export const Page_home = () => {
 
     const {pageContent} = useContext(Page_home_context)
-    console.log(pageContent.cards)
+
     return(
-        <Container_pages>
+        <Container_pages conditionBeforeDisplay={pageContent}>
 
             <Header/>
 
@@ -52,7 +52,6 @@ export const Page_home = () => {
                 </div>
 
             </Interface_centered>
-
 
             <Banner backgroundImage={pageContent.banners[0].image} text={pageContent.banners[0].text} />
 

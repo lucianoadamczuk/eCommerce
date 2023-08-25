@@ -1,6 +1,7 @@
 // Buttons
 export {Button} from "./buttons/Button"
 export {Button_2} from "./buttons/Button_2"
+export {Button_3} from "./buttons/Button_3"
 
 // Cards
 export {Card} from "./Card"

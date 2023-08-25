@@ -4,9 +4,9 @@ export const Button = ({text}) => {
 
 
     return(
-        <article className={`w-fit py-2 px-7 m-2 flex items-center bg-light shadow-md shadow-dark cursor-pointer space-x-2 hover:space-x-6 `} >
+        <button className={`w-fit py-2 px-7 m-2 flex items-center bg-light shadow-md shadow-dark cursor-pointer space-x-2 hover:space-x-6 `} >
             <p className=" text-sm font-bold uppercase tracking-widest "> {text} </p>
             <Icon_arrow/>
-        </article>
+        </button>
     )
 }

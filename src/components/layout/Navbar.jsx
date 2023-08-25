@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Icon_menu, Icon_user } from "../../icons"
 import { NavLink } from "react-router-dom"
+import { Widget_shoppingBag } from "../widgets"
 
 
 export const Navbar = () => {
@@ -63,9 +64,10 @@ export const Navbar = () => {
                         
                     </div>
 
-                    <div className=" flex space-x-2">
+                    <div className=" flex gap-2">
 
                         <Icon_user/>
+                        <Widget_shoppingBag/>
 
                     </div>
 

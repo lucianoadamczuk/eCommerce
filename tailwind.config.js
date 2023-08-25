@@ -16,6 +16,8 @@ export default {
 
       primary: "#a3e635",
       secondary:"#4f46e5",
+
+      danger: "#b81414"
     
     },
     container: {

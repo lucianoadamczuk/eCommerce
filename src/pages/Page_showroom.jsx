@@ -3,6 +3,7 @@ import { Carousel_fade } from "../components/ui"
 import { Page_showroom_context } from "../providers"
 import { Container_carousel_responsive } from "../containers/Container_carousel_responsive"
 import { useParams } from "react-router-dom"
+import { Container_pages } from "../containers/Container_pages"
 
 export const Page_showroom = () => {
 
@@ -16,7 +17,7 @@ export const Page_showroom = () => {
     
 
     return(
-        <>
+        <Container_pages conditionBeforeDisplay={dataToShow}>
             <article className=" container pt-32 grid grid-cols-1 lg:grid-cols-2 gap-5 " >
 
                     <div style={{height:"75vh"}}>
@@ -46,6 +47,6 @@ export const Page_showroom = () => {
                 <Container_carousel_responsive text="Shoes" dataToShow={dataToShow?.products?.shoes}/> 
 
             </article>
-        </>
+        </Container_pages>
     )
 }

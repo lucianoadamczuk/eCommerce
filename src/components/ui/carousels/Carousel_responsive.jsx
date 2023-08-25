@@ -40,6 +40,7 @@ export const Carousel_responsive = ({dataToShow}) => {
                     dataToShow?.map(product => (
                         <SwiperSlide key={product.id}> 
                             <Card_product 
+                                id={product.id}
                                 imgURL={product.imgURL}
                                 title={product.title} 
                                 price={product.price}
