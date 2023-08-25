@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { Carousel_fade } from "../components/ui"
+import { Banner, Carousel_fade } from "../components/ui"
 import { Page_showroom_context } from "../providers"
 import { Container_carousel_responsive } from "../containers/Container_carousel_responsive"
 import { useParams } from "react-router-dom"
@@ -47,6 +47,9 @@ export const Page_showroom = () => {
                 <Container_carousel_responsive text="Shoes" dataToShow={dataToShow?.products?.shoes}/> 
 
             </article>
+
+            <Banner backgroundImage={dataToShow?.banner.image} text={dataToShow?.banner?.text} />
+
         </Container_pages>
     )
 }

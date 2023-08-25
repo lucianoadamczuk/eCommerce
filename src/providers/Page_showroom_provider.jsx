@@ -21,6 +21,10 @@ export const Page_showroom_provider = ({children}) => {
             shirts: databaseProducts.men.shirts,
             pants: databaseProducts.men.pants,
             shoes: databaseProducts.men.shoes,
+        },
+        banner: {
+            text: "gilgamesh for him",
+            image: "/images/banners/page_men.jpg"
         }
     }
 
@@ -38,6 +42,10 @@ export const Page_showroom_provider = ({children}) => {
             shirts: databaseProducts.women.shirts,
             pants: databaseProducts.women.pants,
             shoes: databaseProducts.women.shoes,
+        },
+        banner: {
+            text: "gilgamesh for her",
+            image: "/images/banners/page_women.jpg"
         }
     }
 
@@ -55,6 +63,10 @@ export const Page_showroom_provider = ({children}) => {
             shirts: databaseProducts.youngs.shirts,
             pants: databaseProducts.youngs.pants,
             shoes: databaseProducts.youngs.shoes,
+        },
+        banner: {
+            text: "gilgamesh for them",
+            image: "/images/banners/page_youngs.jpg"
         }
     }
 
