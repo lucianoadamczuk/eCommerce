@@ -59,7 +59,7 @@ export const Navbar = () => {
                         </NavLink>
                         
                         <NavLink to="showroom/youngs">
-                            <p className=" px-4 uppercase tracking-widest cursor-pointer       hover:bg-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>Childrens</p>
+                            <p className=" px-4 uppercase tracking-widest cursor-pointer       hover:bg-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>Youngs</p>
                         </NavLink>
                         
                     </div>

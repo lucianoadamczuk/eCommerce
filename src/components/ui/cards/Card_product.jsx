@@ -8,10 +8,23 @@ export const Card_product = ({ id, imgURL, title, price, stock}) => {
 
     const navigate = useNavigate()
 
+    const isMobile = window.innerWidth <= 768;
+
+    function handleClick(){
+        if(isMobile){
+            if(index === 0){
+                setIndex(1)
+            }else{
+                setIndex(0)
+            }
+        }
+    }
+    
     return(
             <article className=" shadow-lg shadow-muted" 
-                onMouseOver={() => setIndex(1)} 
-                onMouseLeave={() => setIndex(0)} 
+                onClick={() => handleClick()}
+                onMouseOver={!isMobile  ? () => setIndex(1) : null } 
+                onMouseLeave={!isMobile ? () => setIndex(0) : null } 
             >
 
                 <div className=" relative">

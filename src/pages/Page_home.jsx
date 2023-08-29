@@ -1,13 +1,22 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Header } from "../components/layout"
 import { Banner, Button_2, Card, Card_withHover } from "../components/ui"
 import { Container_pages } from "../containers/Container_pages"
 import { Page_home_context } from "../providers"
 import { Interface_centered } from "../interfaces"
+import { DB_products } from "../databases/DB_products"
 
 export const Page_home = () => {
 
     const {pageContent} = useContext(Page_home_context)
+
+    const {databaseProducts} = useContext(DB_products)
+
+    useEffect(() => {
+        const mergedDatabase = Object.values(databaseProducts)
+        console.log(mergedDatabase.find(item => item.id === "male-pant-1"))
+    }, [])
+    
 
     return(
         <Container_pages conditionBeforeDisplay={pageContent}>
