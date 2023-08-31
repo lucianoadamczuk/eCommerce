@@ -1,25 +1,19 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Header } from "../components/layout"
-import { Banner, Button_2, Card, Card_withHover } from "../components/ui"
+import { Banner, Button_2, Card, Card_withHover, Carousel_responsive } from "../components/ui"
 import { Container_pages } from "../containers/Container_pages"
 import { Page_home_context } from "../providers"
 import { Interface_centered } from "../interfaces"
-import { DB_products } from "../databases/DB_products"
+import { Container_carousel_responsive } from "../containers/Container_carousel_responsive"
+
 
 export const Page_home = () => {
 
-    const {pageContent} = useContext(Page_home_context)
+    const {pageContent, popularProducts, newProducts} = useContext(Page_home_context)
 
-    const {databaseProducts} = useContext(DB_products)
-
-    useEffect(() => {
-        const mergedDatabase = Object.values(databaseProducts)
-        console.log(mergedDatabase.find(item => item.id === "male-pant-1"))
-    }, [])
-    
 
     return(
-        <Container_pages conditionBeforeDisplay={pageContent}>
+        <Container_pages conditionBeforeDisplay={pageContent && popularProducts && newProducts}>
 
             <Header/>
 
@@ -39,6 +33,11 @@ export const Page_home = () => {
                         <Card_withHover backgroundImage={pageContent.cards_withHover[3].image} text={pageContent.cards_withHover[3].text}/>
                 </section>
 
+            </Interface_centered>
+
+            <Interface_centered>
+                <Container_carousel_responsive text="Populars" dataToShow={popularProducts?.slice(0, 10)} />
+                <Container_carousel_responsive text="News" dataToShow={newProducts?.slice(0, 10)} />
             </Interface_centered>
 
             <Interface_centered

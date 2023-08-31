@@ -1,4 +1,5 @@
-import { createContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { DB_products } from "../databases/DB_products";
 
 export const Page_home_context = createContext()
 
@@ -49,8 +50,29 @@ export const Page_home_provider = ({children}) => {
 
     }
 
+    const {databaseProducts} = useContext(DB_products)
+
+    const [popularProducts, setPopularProducts] = useState()
+    const [newProducts, setNewProducts] = useState()
+
+    useEffect(() => {
+        const mergedDatabase = Object.values(databaseProducts)
+
+        const allArrays = Object.values(mergedDatabase).flatMap(category => {
+            return Object.values(category)
+        })
+
+        const allItems = [].concat(...allArrays)
+
+        setNewProducts(allItems.filter(item => item.new === true))
+        setPopularProducts(allItems.filter(item => item.popular === true))
+    }, [])
+
+
+    
+
     return(
-        <Page_home_context.Provider value={{pageContent}}>
+        <Page_home_context.Provider value={{pageContent, popularProducts, newProducts}}>
             {children}
         </Page_home_context.Provider>
     )

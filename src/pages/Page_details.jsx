@@ -29,7 +29,6 @@ export const Page_details = () => {
         dataToShow,
         productColor, setProductColor,
         productSize, setProductSize, 
-        productQuantity, setProductQuantity,
         productPrice, setProductPrice
     } = useContext(Page_details_context)
 

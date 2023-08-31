@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { DB_products } from "../databases/DB_products";
-import { useParams } from "react-router-dom";
+
 
 export const Page_details_context = createContext()
 
@@ -21,20 +21,17 @@ export const Page_details_provider = ({children}) => {
 
     // Due to the database is an array of objects i have to merged them in one to be able to find the one which fit with the ID to search
     useEffect(() => {
+        const mergedDatabase = Object.values(databaseProducts)
+        const allArrays = Object.values(mergedDatabase).flatMap(category => {
+            return Object.values(category)
+        })
+        console.log(allArrays)
+        const allItems = [].concat(...allArrays)
 
-        const merged_databaseProducts = Object.values(databaseProducts)
-        setUnifiedArray(merged_databaseProducts.reduce((accumulator, currentValue) => {
-        for (const key in currentValue) {
-            if (Array.isArray(currentValue[key])) {
-                accumulator = accumulator.concat(currentValue[key]);
-            }
-        }
-            return accumulator;
-        }, []))
-
-        setDataToShow(unifiedArray)
-
+        setUnifiedArray(allItems)
     }, [])
+
+    
 
     // set data
     useEffect(() => {

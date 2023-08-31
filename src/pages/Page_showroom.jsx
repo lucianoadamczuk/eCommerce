@@ -26,7 +26,7 @@ export const Page_showroom = () => {
 
                     <div className=" flex flex-col justify-center gap-2 ">
 
-                        <div className=" w-fit py-2 px-9 bg-dark ">
+                        <div className=" w-full lg:w-fit py-2 px-9 bg-dark ">
                             <h5 className=" text-5xl font-bold uppercase tracking-widest animate-pulse text-primary"> 
                                 {dataToShow.title} 
                             </h5>
