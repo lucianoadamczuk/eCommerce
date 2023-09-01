@@ -3,6 +3,7 @@ import { Footer, Navbar } from "./components/layout"
 import { Page_details, Page_home, Page_shopping, Page_showroom } from "./pages"
 import { Counter_provider, Page_details_provider, Page_home_provider, Page_shopping_provider, Page_showroom_provider } from "./providers"
 import { DB_products_provider } from "./databases"
+import { ScrollToTop } from "./components/others"
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
             <Page_showroom_provider>
               <Page_shopping_provider>
                 <Page_details_provider>
-
+                <ScrollToTop/>
+                
                   <Navbar/>
                     <Routes>
                       <Route path="/" element={<Page_home/>} />
