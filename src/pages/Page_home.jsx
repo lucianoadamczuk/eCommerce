@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Header } from "../components/layout"
-import { Banner, Button_2, Card, Card_withHover, Carousel_responsive } from "../components/ui"
+import { Banner, Button_2, Card_withHover, Card_withText,  } from "../components/ui"
 import { Container_pages } from "../containers/Container_pages"
 import { Page_home_context } from "../providers"
 import { Interface_centered } from "../interfaces"
@@ -45,9 +45,9 @@ export const Page_home = () => {
                 paragraph={pageContent.sections[1].paragraph}
             >
                 
-                <Card text={pageContent.cards[0].text} backgroundImage={pageContent.cards[0].image} />
-                <Card text={pageContent.cards[1].text} backgroundImage={pageContent.cards[1].image} inverted={true}/>
-                <Card text={pageContent.cards[2].text} backgroundImage={pageContent.cards[2].image} />
+                <Card_withText text={pageContent.cards[0].text} backgroundImage={pageContent.cards[0].image} />
+                <Card_withText text={pageContent.cards[1].text} backgroundImage={pageContent.cards[1].image} inverted={true}/>
+                <Card_withText text={pageContent.cards[2].text} backgroundImage={pageContent.cards[2].image} />
 
                 <div className=" md:flex justify-center ">
                     <Button_2 

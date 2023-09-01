@@ -4,7 +4,7 @@ export {Button_2} from "./buttons/Button_2"
 export {Button_3} from "./buttons/Button_3"
 
 // Cards
-export {Card} from "./Card"
+export {Card_withText} from "./cards/Card_withText"
 export {Card_withHover} from "./cards/Card_withHover"
 export {Card_product} from "./cards/Card_product"
 
